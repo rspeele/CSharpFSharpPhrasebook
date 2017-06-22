@@ -30,10 +30,12 @@ z <- z + "world"
 
 ```csharp
 
-if (1 < 2) {
+if (1 < 2)
+{
     Console.WriteLine("This line executes if the condition is true.");
     Console.WriteLine("Reality seems to be working normally.");
-} else {
+} else
+{
     Console.WriteLine("This code executes if the condition is false.");
     Console.WriteLine("The sky is falling.");
 }
@@ -72,11 +74,15 @@ Console.WriteLine(if 1 + 1 = 2 then "Sane" else "Donkey brains")
 ```csharp
 
 var reading = true;
-while (reading) {
+while (reading)
+{
     var line = Console.ReadLine();
-    if (line == null) {
+    if (line == null)
+    {
         reading = false;
-    } else {
+    }
+    else
+    {
         Console.WriteLine(line);
     }
 }
@@ -97,7 +103,8 @@ while reading do
 
 ```csharp
 
-for (int i = 0; i <= 10; i++) {
+for (int i = 0; i <= 10; i++)
+{
     Console.WriteLine(i);
 }
 
@@ -113,7 +120,8 @@ for i = 0 to 10 do
 ```csharp
 
 var myArray = new[] { "abc", "123" };
-foreach (var element in myArray) {
+foreach (var element in myArray)
+{
     Console.WriteLine("It's as easy as " + element);
 }
 
