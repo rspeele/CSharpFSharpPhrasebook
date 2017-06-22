@@ -8,8 +8,8 @@ _don't_ exist in C#.
 
 The samples are currently split into two sections:
 
-* [Code](CheatsheetCode.md) shows how to translate the code you write inside
-  methods: variable assignments, loops, conditionals, etc.
+* [The code section](CheatsheetCode.md) shows how to translate the code you
+  write inside methods: variable assignments, loops, conditionals, etc.
 
-* [Code](CheatsheetTypes.md) shows how to translate the code you write to define
-  classes, interfaces, enums, generics, etc.
+* [The types section](CheatsheetTypes.md) shows how to translate the code you
+  write to define classes, interfaces, enums, generics, etc.

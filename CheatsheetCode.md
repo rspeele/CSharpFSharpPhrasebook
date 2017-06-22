@@ -1,6 +1,3 @@
-open System
-open System.Linq
-
 # Variables
 
 ```csharp
