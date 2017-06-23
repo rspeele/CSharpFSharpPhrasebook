@@ -246,7 +246,7 @@ conversion operator from `DateTime` to `DateTimeOffset`.
 DateTimeOffset myDateTimeOffset = DateTime.UtcNow; // implicit conversion
 ```
 
-In F# there is implicit conversion, ever. Nor is there any built-in special
+In F# there is no implicit conversion, ever. Nor is there any built-in special
 syntax for calling these custom cast operators. So you're stuck calling the
 actual .NET method:
 
