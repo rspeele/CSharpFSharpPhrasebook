@@ -5,8 +5,8 @@ Some of them are straight-up redundant: there are multiple syntaxes to write
 code with identical semantics.
 
 I consider this excess of options a wart on the language, but none of the
-options are _bad_, so it's fine once you know them. It's just a lot to have to
-learn, and unnecessarily so.
+options are _bad_, so it's fine once you know them. It's just an unnecessarily
+large number of things to learn.
 
 At the bottom of this page I express my opinions on which of the redundant
 casting approaches to settle on.
