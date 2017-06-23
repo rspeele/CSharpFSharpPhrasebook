@@ -31,8 +31,9 @@ you are not casting from a child type to a parent type, this will be caught at
 compile time.
 
 ```fsharp
-// you can use `upcast`
 let memStream : MemoryStream = new MemoryStream()
+
+// you can use `upcast`
 let stream1 : Stream = upcast memStream
 let disposable1 : IDisposable = upcast stream1
 
@@ -49,8 +50,6 @@ type Example =
 
 let myInteger : int = 1
 Example.MethodTakingObject(myInteger) // no need to explicitly upcast int to obj here
-```
-
 ```
 
 ## Forced downcasting (treating a parent type as one of its child types)
