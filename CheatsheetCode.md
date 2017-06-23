@@ -2,15 +2,15 @@
 
 ```csharp
 
-int x = 1;
-var y = 1 + x; // type inferred to be int
+int x = 1; // type explicitly written on declaration
+var y = 1 + x; // type inferred
 
 ```
 
 ```fsharp
 
-let x = 1
-let y = 1 + x
+let x : int = 1 // type explicitly written on declaration
+let y = 1 + x // type inferred
 
 ```
 

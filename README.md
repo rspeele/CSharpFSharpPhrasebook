@@ -6,10 +6,16 @@ The idea is that if you can easily do the same stuff you already know from C#,
 that gives you some solid ground to stand on for learning the features that
 _don't_ exist in C#.
 
-The samples are currently split into two sections:
+The samples are currently split into three sections:
 
 * [The code section](CheatsheetCode.md) shows how to translate the code you
   write inside methods: variable assignments, loops, conditionals, etc.
 
 * [The types section](CheatsheetTypes.md) shows how to translate the code you
   write to define classes, interfaces, enums, generics, etc.
+
+* [The casting and conversion section](CheatsheetCasting.md) shows how to
+  translate C# code that casts, converts, boxes, and unboxes objects. F#
+  includes a slew of casting and conversion operators, and it is important to
+  see how they differ (and sometimes, how they are identical).
+
