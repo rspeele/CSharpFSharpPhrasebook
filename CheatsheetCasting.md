@@ -92,36 +92,42 @@ let isInteger = x :? int; // true
 
 ## Type conditional assignment (C# `as` operator, C# 7 `is` pattern matching)
 
+The old C# way (before C# 7.0):
+
 ```csharp
 object x = "hello";
 
-// Old C# way (language version < 7)
-var s1 = x as string;
-if (s1 != null)
+var s = x as string;
+if (s != null)
 {
-    Console.WriteLine(s1.Length); // yay, we can use this as a string
+    Console.WriteLine(s.Length); // yay, we can use this as a string
 }
 else
 {
-    var i1 = x as int?;
-    if (i1 != null)
+    var i = x as int?;
+    if (i != null)
     {
-        Console.WriteLine(i1.Value + 1); // yay, we can use this as an int
+        Console.WriteLine(i.Value + 1); // yay, we can use this as an int
     }
     else
     {
         Console.WriteLine("Not a string or int");
     }
 }
+```
 
-// New C# way (language version >= 7)
-if (x is string s2)
+The new C# way (since C# 7.0):
+
+```csharp
+object x = "hello";
+
+if (x is string s)
 {
-    Console.WriteLine(str2.Length); // yay, we can use this as a string
+    Console.WriteLine(s.Length); // yay, we can use this as a string
 }
-else if (x is int i2)
+else if (x is int i)
 {
-    Console.WriteLine(i2 + 1);
+    Console.WriteLine(i + 1);
 }
 else
 {
@@ -136,7 +142,7 @@ The F# way is very similar to the C# 7 way (which it inspired).
 let x = "hello" :> obj
 match x with
 | :? string as s ->
-    Console.WriteLine(z.Length) // yay, we can use this as a string
+    Console.WriteLine(s.Length) // yay, we can use this as a string
 | :? int as i ->
     Console.WriteLine(i + 1)
 | _ ->
