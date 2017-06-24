@@ -6,6 +6,12 @@ The idea is that if you can easily do the same stuff you already know from C#,
 that gives you some solid ground to stand on for learning the features that
 _don't_ exist in C#.
 
+Emphasis has been placed on making the translations as literal as possible. This
+means that I value making these samples 1-to-1 equivalent with the C# code they
+replace more than I value making them idiomatic, functional-style F# code. I
+figure that you can learn idioms _after_ getting over the frustration of not
+being able to express something you're accustomed to writing in C#.
+
 The samples are currently split into three sections:
 
 * [The code section](Code.md) shows how to translate the code you
