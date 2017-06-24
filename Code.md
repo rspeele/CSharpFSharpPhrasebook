@@ -55,7 +55,9 @@ otherwise not have realized it.
 ```fsharp
 let exampleDisposableWarning = MemoryStream()
 // compiler warning:
-// It is recommended that objects supporting the IDisposable interface are created using the syntax 'new Type(args)', rather than 'Type(args)'
+// It is recommended that objects supporting the IDisposable
+// interface are created using the syntax 'new Type(args)',
+// rather than 'Type(args)'
 ```
 
 ## Conditionals
