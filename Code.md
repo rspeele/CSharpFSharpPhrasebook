@@ -281,6 +281,8 @@ var genericDictionaryType = typeof(Dictionary<,>);
 
 ```fsharp
 let specificDictionaryType = typeof<Dictionary<string, int>>
+
+// note: typeDEFof<>, not typeof<>
 let genericDictionaryType = typedefof<Dictionary<_, _>>
 ```
 
