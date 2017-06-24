@@ -172,7 +172,7 @@ public static class FizzBuzzer
 ```fsharp
 type FizzBuzzer =
     static member FizzBuzz(fizz, buzz) =
-        let representation(i) =
+        let representation i =
             match i % 3, i % 5 with
             | 0, 0 -> fizz + buzz
             | 0, _ -> fizz
