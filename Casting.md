@@ -120,20 +120,18 @@ The new C# way (since C# 7.0):
 
 ```csharp
 object x = "hello";
-
-if (x is string s)
+switch (x)
 {
-    Console.WriteLine(s.Length); // yay, we can use this as a string
+    case string s:
+        Console.WriteLine(s.Length); // yay, we can use this as a string
+        break;
+    case int i:
+        Console.WriteLine(i + 1);
+        break;
+    default:
+        Console.WriteLine("Not a string or int");
+        break;
 }
-else if (x is int i)
-{
-    Console.WriteLine(i + 1);
-}
-else
-{
-    Console.WriteLine("Not a string");
-}
-
 ```
 
 The F# way is very similar to the C# 7 way (which it inspired).
@@ -146,7 +144,7 @@ match x with
 | :? int as i ->
     Console.WriteLine(i + 1)
 | _ ->
-    Console.WriteLine("Not a string")
+    Console.WriteLine("Not a string or int")
 ```
 
 Note that all 3 approaches (the 2 C# ways and the 1 F# way) treat nulls the same
