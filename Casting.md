@@ -161,7 +161,7 @@ In order to help prevent nulls getting into those types via casting, the
 `downcast` and `:?>` operators check for null when downcasting to an F# type
 that is not supposed to permit nulls.
 
-```
+```fsharp
 [<AllowNullLiteral>]
 type CSharpyReferenceType() = class end
 
