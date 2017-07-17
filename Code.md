@@ -51,7 +51,6 @@ implements `IDisposable`, in which case you will get a warning if you don't use
 occasionally serve to inform you that a type is `IDisposable` where you may
 otherwise not have realized it.
 
-
 ```fsharp
 let exampleDisposableWarning = MemoryStream()
 // compiler warning:
@@ -59,6 +58,30 @@ let exampleDisposableWarning = MemoryStream()
 // interface are created using the syntax 'new Type(args)',
 // rather than 'Type(args)'
 ```
+
+## Instantiating with property-setters
+
+```csharp
+var startInfo = new ProcessStartInfo("example.exe")
+    {
+        Arguments = "stuff",
+        CreateNoWindow = true,
+        UseShellExecute = false,
+    };
+```
+
+```fsharp
+let startInfo =
+    ProcessStartInfo
+        ( "example.exe"
+        , Arguments = "stuff"
+        , CreateNoWindow = true
+        , UseShellExecute = false
+        )
+```
+
+Note: you don't have to use the above indentation style and leading commas, but
+I find it reads well when there are many properties being set.
 
 ## Conditionals
 

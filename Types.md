@@ -148,6 +148,31 @@ type BagOfData() =
         and set(value) = zField <- value
 ```
 
+# Structs (value types)
+
+Generally it is sufficient to just put the `[<Struct>]` attribute on a type to
+make it a value type.
+
+```csharp
+[Serializable]
+public struct Point
+{
+    public int X { get; }
+    public int Y { get; }
+    public Point(int x, int y)
+    {
+        X = x;
+        Y = y;
+    }
+}
+```
+
+```fsharp
+[<Struct>]
+type Point(x : int, y : int) =
+    member this.X = x
+    member this.Y = y
+```
 
 # Inheritance
 
@@ -384,6 +409,31 @@ type PermissionFlags =
     | Move = 4us
     | Delete = 8us
 
+```
+
+# Mutable fields
+
+```csharp
+[Serializable]
+public class Point
+{
+    public int X;
+    public int Y;
+}
+
+// example usage
+var p = new Point { X = 1, Y = 2 };
+p.X = 3;
+```
+
+```fsharp
+type Point =
+    val mutable public X : int
+    val mutable public Y : int
+
+// example usage
+let p = Point(X = 1, Y = 2)
+p.X <- 3
 ```
 
 # Extension methods
