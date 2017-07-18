@@ -267,10 +267,10 @@ public interface IShape
 ```fsharp
 
 type IShape =
-    abstract member Hello : unit -> unit
-    abstract member Area : double
-    abstract member Perimeter : double
-    abstract member Resize : scaleX : double * scaleY : double -> IShape
+    abstract Hello : unit -> unit
+    abstract Area : double
+    abstract Perimeter : double
+    abstract Resize : scaleX : double * scaleY : double -> IShape
 
 ```
 
